@@ -29,7 +29,7 @@
                 <action android:name="com.itchunyang.service.intent" />
             </intent-filter>
         </service>
-        <service android:name=".LocalService" />
+        <service android:name=".LocalService"/>
         <service android:name=".RemoteService" android:exported="true">
             <intent-filter>
                 <action android:name="com.itchunyang.service.aidl"/>
@@ -41,6 +41,7 @@
                 <action android:name="com.itchunyang.service.messenger"/>
             </intent-filter>
         </service>
+        <service android:name=".LongService" />
     </application>
 
 </manifest>

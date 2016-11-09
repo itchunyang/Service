@@ -41,7 +41,8 @@ public class SimpleService extends Service {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(3000);
+
+                    Thread.sleep(6000);
                     System.out.println("Service 工作");
                     stopSelf();
                 } catch (InterruptedException e) {

@@ -10,6 +10,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+/**
+ * android:process = package:remote，将运行在package:remote进程中，属于全局进程，其他具有相同shareUID与签名的APP可以跑在这个进程中。
+ * android:process = :remote ，将运行在默认包名:remote进程中，而且是APP的私有进程，不允许其他APP的组件来访问。
+ * 注意 android:process:remote是可以的,但是android:process=remote直接这样写却不可以!要按照包名的格式才会能安装到andorid设备里面
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
@@ -63,5 +69,8 @@ public class MainActivity extends AppCompatActivity {
             connection = null;
         }
         super.onStop();
+    }
+
+    public void longService(View view) {
     }
 }
